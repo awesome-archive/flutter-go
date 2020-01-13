@@ -1,12 +1,12 @@
-/*
- * @Author: 一凨 
- * @Date: 2018-11-16 15:09:12 
- * @Last Modified by: 一凨
- * @Last Modified time: 2018-12-08 20:11:44
- */
+/// @Author: 一凨
+/// @Date: 2018-11-16 15:09:12
+/// @Last Modified by: 一凨
+/// @Last Modified time: 2018-12-08 20:11:44
+
 import 'package:flutter/material.dart';
+
 import './raw_image_demo.dart';
-import '../../../../../common/widget_demo.dart';
+import 'package:flutter_go/components/widget_demo.dart';
 
 const contentText0 = '''
 ### **简介**
@@ -21,7 +21,7 @@ const contentText1 = '''
 
 ''';
 
-const contentText2= '''
+const contentText2 = '''
 ### **高级用法**
 > 关于更多详细介绍，请看paintImage的属性说明
 ''';

@@ -1,9 +1,8 @@
-import '../../../../model/widget.dart';
 import "package:flutter/material.dart";
 
+import '../../../../model/widget.dart';
 import 'RichText/index.dart' as RichText;
 import 'Text/index.dart' as Text;
-
 
 List<WidgetPoint> widgetPoints = [
   WidgetPoint(

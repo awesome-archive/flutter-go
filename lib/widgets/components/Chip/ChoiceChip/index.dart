@@ -1,12 +1,10 @@
-/*
- * @Author: xiaojia.dxj
- * @Date: 2018-12-19 15:13:29 
- * @Last Modified by: xiaojia.dxj
- * @Last Modified time: 2018-12-21 10:22:57
- */
+/// @Author: xiaojia.dxj
+/// @Date: 2018-12-19 15:13:29
+/// @Last Modified by: xiaojia.dxj
+/// @Last Modified time: 2018-12-21 10:22:57
 
 import 'package:flutter/material.dart';
-import '../../../../common/widget_demo.dart';
+import 'package:flutter_go/components/widget_demo.dart';
 import 'demo.dart';
 
 const String content0 = '''
@@ -32,10 +30,11 @@ class _DemoState extends State<Demo> {
         contentList: [
           content0,
           content1,
-         ChoiceChipDemo(),
+          ChoiceChipDemo(),
         ],
         codeUrl: 'components/Chip/ChoiceChip/demo.dart',
-        docUrl:'https://docs.flutter.io/flutter/material/ChoiceChip-class.html',
+        docUrl:
+            'https://docs.flutter.io/flutter/material/ChoiceChip-class.html',
         title: 'ChoiceChip');
   }
 }

@@ -1,13 +1,13 @@
-/**
- * Created with Android Studio.
- * User: 三帆
- * Date: 07/01/2019
- * Time: 10:26
- * email: sanfan.hx@alibaba-inc.com
- * tartget:  xxx
- */
-import '../../../../common/widget_demo.dart';
+/// Created with Android Studio.
+/// User: 三帆
+/// Date: 07/01/2019
+/// Time: 10:26
+/// email: sanfan.hx@alibaba-inc.com
+/// target:  xxx
+
 import 'package:flutter/material.dart';
+
+import 'package:flutter_go/components/widget_demo.dart';
 import 'demo.dart';
 
 const String _Text0 = """
@@ -40,7 +40,6 @@ Scaffold 有下面几个主要属性：
 
 """;
 
-
 class Demo extends StatefulWidget {
   static const String routeName = '/components/Scaffold/Scaffold';
 
@@ -56,7 +55,7 @@ class _DemoState extends State<Demo> {
       codeUrl: 'components/Scaffold/Scaffold/demo.dart',
       contentList: [
         _Text0,
-        new ScaffoldDemo(),
+        ScaffoldDemo(),
       ],
       docUrl: 'https://docs.flutter.io/flutter/material/Scaffold-class.html',
     );

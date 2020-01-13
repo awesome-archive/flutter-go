@@ -1,15 +1,14 @@
-/**
- * Created with 菜鸟手册.
- * User: 一晟
- * Date: 2018/11/14
- * Time: 下午4:31
- * email: zhu.yan@alibaba-inc.com
- * target: TextField 的示例
- * 对应文档地址:https://docs.flutter.io/flutter/material/TextField-class.html
- */
+/// Created with FlutterGo.
+/// User: 一晟
+/// Date: 2018/11/14
+/// Time: 下午4:31
+/// email: zhu.yan@alibaba-inc.com
+/// target: TextField 的示例
+/// 对应文档地址:https://docs.flutter.io/flutter/material/TextField-class.html
 
-import '../../../../../common/widget_demo.dart';
 import 'package:flutter/material.dart';
+
+import 'package:flutter_go/components/widget_demo.dart';
 import './text_field_demo.dart';
 
 const String _textFieldText0 = """### **简介**
@@ -35,7 +34,7 @@ const String _textFieldText2 = """### **进阶用法**
 """;
 
 class Demo extends StatefulWidget {
-  static const String routeName = 'elements/Form/Input/TextField';
+  static const String routeName = 'element/Form/Input/TextField';
 
   @override
   _DemoState createState() => _DemoState();

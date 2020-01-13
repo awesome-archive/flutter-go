@@ -1,11 +1,11 @@
-/*
- * @Author: xiaojia.dxj
- * @Date: 2018-12-18 11:40:57 
- * @Last Modified by: xiaojia.dxj
- * @Last Modified time: 2018-12-18 15:13:23
- */
+/// @Author: xiaojia.dxj
+/// @Date: 2018-12-18 11:40:57
+/// @Last Modified by: xiaojia.dxj
+/// @Last Modified time: 2018-12-18 15:13:23
+
 import 'package:flutter/material.dart';
-import '../../../../common/widget_demo.dart';
+
+import 'package:flutter_go/components/widget_demo.dart';
 import 'demo.dart';
 
 const String content0 = '''
@@ -31,11 +31,10 @@ class _DemoState extends State<Demo> {
         contentList: [
           content0,
           content1,
-         ChipDemo(),
+          ChipDemo(),
         ],
         codeUrl: 'components/Chip/Chip/demo.dart',
-        docUrl:
-            'https://docs.flutter.io/flutter/material/Chip-class.html',
+        docUrl: 'https://docs.flutter.io/flutter/material/Chip-class.html',
         title: 'Chip');
   }
 }

@@ -1,12 +1,11 @@
-/*
- * @Author: 一凨 
- * @Date: 2018-11-16 15:09:19 
- * @Last Modified by: 一凨
- * @Last Modified time: 2019-01-07 15:37:07
- */
-import '../../../../model/widget.dart';
+/// @Author: 一凨
+/// @Date: 2018-11-16 15:09:19
+/// @Last Modified by: 一凨
+/// @Last Modified time: 2019-01-07 15:37:07
+
 import "package:flutter/material.dart";
 
+import '../../../../model/widget.dart';
 import './AssetImage/index.dart' as AssetImage;
 import './DecorationImage/index.dart' as DecorationImage;
 import './DecorationImagePainter/index.dart' as DecorationImagePainter;
@@ -19,7 +18,6 @@ import './paintImage/index.dart' as paintImage;
 import './precacheImage/index.dart' as precacheImage;
 import './RawImage/index.dart' as RawImage;
 import './Image/index.dart' as Image;
-
 
 List<WidgetPoint> widgetPoints = [
   WidgetPoint(

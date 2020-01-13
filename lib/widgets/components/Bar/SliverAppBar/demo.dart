@@ -1,18 +1,13 @@
-/**
- * Created with Android Studio.
- * User: ryan
- * Date: 2019/1/1
- * Time: 下午4:11
- * email: zhu.yan@alibaba-inc.com
- * tartget: SliverAppBar 的示例
- */
+/// Created with Android Studio.
+/// User: 一晟
+/// Date: 2019/1/1
+/// Time: 下午4:11
+/// email: zhu.yan@alibaba-inc.com
+/// target: SliverAppBar 的示例
 
 import 'package:flutter/material.dart';
 
-/*
-* Checkbox 默认按钮的实例
-* index 当前checkbox 的索引值
-* */
+// 默认 SliverAppBar 的实例
 class SliverAppBarFullDefault extends StatefulWidget {
   const SliverAppBarFullDefault() : super();
 
@@ -20,21 +15,17 @@ class SliverAppBarFullDefault extends StatefulWidget {
   State<StatefulWidget> createState() => _SliverAppBarFullDefault();
 }
 
-/*
-* SliverAppBar 默认的实例,有状态
-* */
+// SliverAppBar 默认的实例,有状态
 class _SliverAppBarFullDefault extends State {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      // ...  // 如果没有,就是不需要有状态的 StatefulWidget
-    );
+        // ...  // 如果没有,就是不需要有状态的 StatefulWidget
+        );
   }
 }
 
-/*
-* SliverAppBar 默认的实例,无状态
-* */
+// SliverAppBar 默认的实例,无状态
 class SliverAppBarLessDefault extends StatelessWidget {
 //  final widget;
 //  final parent;
@@ -45,11 +36,11 @@ class SliverAppBarLessDefault extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     for (int i = 0; i < 20; i++) {
-      listData.add(new ListItem("我是测试标题$i", Icons.cake));
+      listData.add(ListItem("我是测试标题$i", Icons.cake));
     }
-    return new SizedBox(
+    return SizedBox(
         height: 500.0,
-        child:NestedScrollView(
+        child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
@@ -65,15 +56,16 @@ class SliverAppBarLessDefault extends StatelessWidget {
                 //iconTheme,  // 图标主题,App bar 上图标的颜色、透明度、和尺寸信息。默认值为 ThemeData.primaryIconTheme
                 //textTheme,    //文字主题, App bar 上的文字样式。默认值为 ThemeData.primaryTextTheme
                 //centerTitle,     //标题是否居中, 标题是否居中显示，默认值根据不同的操作系统，显示方式不一样
-                primary: true,  //是否预留高度
-                forceElevated:false,
-                automaticallyImplyLeading:true,
+                primary: true, //是否预留高度
+                forceElevated: false,
+                automaticallyImplyLeading: true,
                 titleSpacing: NavigationToolbar.kMiddleSpacing,
-                snap:false,   //与floating结合使用
-                expandedHeight: 200.0,//展开高度
-                floating: false,//是否随着滑动隐藏标题
-                pinned: true,//是否固定在顶部
-                flexibleSpace: FlexibleSpaceBar( //可以展开区域，通常是一个FlexibleSpaceBar
+                snap: false, //与floating结合使用
+                expandedHeight: 200.0, //展开高度
+                floating: false, //是否随着滑动隐藏标题
+                pinned: true, //是否固定在顶部
+                flexibleSpace: FlexibleSpaceBar(
+                    //可以展开区域，通常是一个FlexibleSpaceBar
                     centerTitle: true,
                     title: Text("我是一个帅气的标题",
                         style: TextStyle(
@@ -87,30 +79,30 @@ class SliverAppBarLessDefault extends StatelessWidget {
                       fit: BoxFit.fill,
                     )),
               ),
-  //            SliverPersistentHeader(
-  //                delegate: _SliverAppBarDelegate(
-  //                  TabBar(
-  //                    controller: new TabController(length: 2, vsync: this),
-  //                    labelColor: Colors.black87,
-  //                    unselectedLabelColor: Colors.grey,
-  //                    tabs: [
-  //                      Tab(icon: Icon(Icons.security), text: "security"),
-  //                      Tab(icon: Icon(Icons.cake), text: "cake"),
-  //                    ],
-  //                  ),
-  //                ))
+              //            SliverPersistentHeader(
+              //                delegate: _SliverAppBarDelegate(
+              //                  TabBar(
+              //                    controller:  TabController(length: 2, vsync: this),
+              //                    labelColor: Colors.black87,
+              //                    unselectedLabelColor: Colors.grey,
+              //                    tabs: [
+              //                      Tab(icon: Icon(Icons.security), text: "security"),
+              //                      Tab(icon: Icon(Icons.cake), text: "cake"),
+              //                    ],
+              //                  ),
+              //                ))
             ];
-        },
-      body: Center(
-        child: new ListView.builder(
-          shrinkWrap: true,
-          itemBuilder: (BuildContext context, int index) {
-            return new ListItemWidget(listData[index]);
           },
-          itemCount: listData.length,
-        ),
-      ),
-    ));
+          body: Center(
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemBuilder: (BuildContext context, int index) {
+                return ListItemWidget(listData[index]);
+              },
+              itemCount: listData.length,
+            ),
+          ),
+        ));
   }
 }
 
@@ -128,13 +120,12 @@ class ListItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new InkWell(
-      child: new ListTile(
-        leading: new Icon(listItem.iconData),
-        title: new Text(listItem.title),
+    return InkWell(
+      child: ListTile(
+        leading: Icon(listItem.iconData),
+        title: Text(listItem.title),
       ),
       onTap: () {},
     );
   }
 }
-

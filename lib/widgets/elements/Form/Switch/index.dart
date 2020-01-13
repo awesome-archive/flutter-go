@@ -1,9 +1,9 @@
-import '../../../../model/widget.dart';
 import "package:flutter/material.dart";
+
+import '../../../../model/widget.dart';
 import "Switch/index.dart" as Switch;
 import "SwitchListTile/index.dart" as SwitchListTile;
 import "AnimatedSwitcher/index.dart" as AnimatedSwitcher;
-
 
 List<WidgetPoint> widgetPoints = [
   WidgetPoint(

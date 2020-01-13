@@ -1,6 +1,6 @@
-import '../../../../model/widget.dart';
 import "package:flutter/material.dart";
 
+import '../../../../model/widget.dart';
 import 'FlatButton/index.dart' as FlatButton;
 import 'RaisedButton/index.dart' as RaisedButton;
 import 'OutlineButton/index.dart' as OutlineButton;
@@ -9,7 +9,6 @@ import 'PopupMenuButton/index.dart' as PopupMenuButton;
 import 'FloatingActionButton/index.dart' as FloatingActionButton;
 import 'RawMaterialButton/index.dart' as RawMaterialButton;
 import 'DropdownButton/index.dart' as DropdownButton;
-
 
 List<WidgetPoint> widgetPoints = [
   WidgetPoint(

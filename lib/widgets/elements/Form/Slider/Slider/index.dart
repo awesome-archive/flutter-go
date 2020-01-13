@@ -1,15 +1,14 @@
-/**
- * Created with Android Studio.
- * User: 三帆
- * Date: 20/12/2018
- * Time: 17:43
- * email: sanfan.hx@alibaba-inc.com
- * tartget:  xxx
- */
+/// Created with Android Studio.
+/// User: 三帆
+/// Date: 20/12/2018
+/// Time: 17:43
+/// email: sanfan.hx@alibaba-inc.com
+/// target:  xxx
 
 import 'package:flutter/material.dart';
-import '../../../../../common/widget_demo.dart';
-import  'demo.dart';
+
+import 'package:flutter_go/components/widget_demo.dart';
+import 'demo.dart';
 
 const contentA = '''
 ### **简介**
@@ -41,7 +40,6 @@ slider 用来选择连续性的或者非连续性的数据. 默认是在一段�
 
 ''';
 
-
 const contentB = '''
 ### **高级用法**
 > 自定义Slider 样式
@@ -49,19 +47,19 @@ const contentB = '''
 如果当前Slider样式 无法满足需求, 可以通过 ** SliderTheme ** 定制复杂样式
 
 ```
-new SliderTheme(
+ SliderTheme(
   data: SliderTheme.of(context).copyWith(
     activeTrackColor: Colors.yellowAccent,//实际进度的颜色
     inactiveTickMarkColor:Colors.black
     thumbColor: Colors.black,//滑块中心的颜色
     inactiveTrackColor:Colors.red,//默 认进度条的颜色
     valueIndicatorColor: Colors.blue,//提示进度的气派的背景色
-    valueIndicatorTextStyle: new TextStyle(//提示气泡里面文字的样式
+    valueIndicatorTextStyle:  TextStyle(//提示气泡里面文字的样式
       color: Colors.white,
     ),
     inactiveTickMarkColor:Colors.blue,//divisions对进度线分割后 断续线中间间隔的颜色
     overlayColor: Colors.pink,//滑块边缘颜色
-  child: new Slider()
+  child:  Slider()
 )
 
 ```
@@ -71,22 +69,17 @@ new SliderTheme(
 ''';
 
 class Demo extends StatefulWidget {
-  static const String routeName = 'elements/Form/Slider/Slider';
+  static const String routeName = 'element/form/Slider/Slider';
   _Demo createState() => _Demo();
 }
 
 class _Demo extends State<Demo> {
-
+  @override
   Widget build(BuildContext context) {
     return WidgetDemo(
       title: 'Slider',
       codeUrl: 'elements/Form/Slider/Slider/demo.dart',
-      contentList: [
-        contentA,
-        SliderDemo(),
-        contentB,
-        SliderThemeDemo()
-      ],
+      contentList: [contentA, SliderDemo(), contentB, SliderThemeDemo()],
       docUrl: 'https://docs.flutter.io/flutter/material/Slider-class.html',
     );
   }

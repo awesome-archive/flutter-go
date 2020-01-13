@@ -1,16 +1,15 @@
-/*
- * @Author: 一凨 
- * @Date: 2018-12-10 21:15:27 
- * @Last Modified by: 一凨
- * @Last Modified time: 2018-12-10 21:16:05
- */
+/// @Author: 一凨
+/// @Date: 2018-12-10 21:15:27
+/// @Last Modified by: 一凨
+/// @Last Modified time: 2018-12-10 21:16:05
+
 import 'package:flutter/material.dart';
 
 class ScrollViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400.0,//注意这里的高度必须得指定
+      height: 400.0, //注意这里的高度必须得指定
       child: PageView(
         children: <Widget>[
           Container(

@@ -1,11 +1,9 @@
-/*
- * @Author: 一凨 
- * @Date: 2018-12-22 21:01:51 
- * @Last Modified by: 一凨
- * @Last Modified time: 2018-12-27 15:37:04
- */
+/// @Author: 一凨
+/// @Date: 2018-12-22 21:01:51
+/// @Last Modified by: 一凨
+/// @Last Modified time: 2018-12-27 15:37:04
+
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class CheckedPopupMenuItemDemo extends StatefulWidget {
   _CheckedPopupMenuItemDemoState createState() =>
@@ -17,7 +15,7 @@ class _CheckedPopupMenuItemDemoState extends State<CheckedPopupMenuItemDemo> {
 
   final String _checkedValue1 = 'One';
   final String _checkedValue2 = 'Two';
-  final String _checkedValue3 = 'Free';
+  final String _checkedValue3 = 'Three';
   final String _checkedValue4 = 'Four';
 
   @override
@@ -26,27 +24,17 @@ class _CheckedPopupMenuItemDemoState extends State<CheckedPopupMenuItemDemo> {
     _checkedValues = <String>[_checkedValue3];
   }
 
-  void showInSnackBar(String value){
-    Fluttertoast.showToast(
-        msg: value,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIos: 1,
-        backgroundColor: Colors.grey,
-        textColor: Colors.white
-    );
-  }
-
   bool isChecked(String value) => _checkedValues.contains(value);
 
-
-  void showCheckedMenuSelections(String value){
-    if(_checkedValues.contains(value)){
+  void showCheckedMenuSelections(String value) {
+    if (_checkedValues.contains(value)) {
       _checkedValues.remove(value);
-    }else{
+    } else {
       _checkedValues.add(value);
     }
-    showInSnackBar('Checked $_checkedValues');
+
+    Scaffold.of(context)
+        .showSnackBar(SnackBar(content: Text('Checked $_checkedValues')));
   }
 
   @override
@@ -54,33 +42,35 @@ class _CheckedPopupMenuItemDemoState extends State<CheckedPopupMenuItemDemo> {
     return Container(
       color: Theme.of(context).primaryColor,
       child: ListTile(
-        title: const Text('CheckedPopupMenuItem Demo',style: TextStyle(color:  Colors.white),),
+        title: const Text(
+          'CheckedPopupMenuItem Demo',
+          style: TextStyle(color: Colors.white),
+        ),
         trailing: PopupMenuButton<String>(
           padding: EdgeInsets.zero,
           onSelected: showCheckedMenuSelections,
-          icon: Icon(Icons.menu,color: Colors.white,),
-          itemBuilder: (BuildContext context)=><PopupMenuItem<String>>[
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+          itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
             CheckedPopupMenuItem<String>(
-                  value: _checkedValue1,
-                  checked: isChecked(_checkedValue1),
-                  child: Text(_checkedValue1)
-                ),
-                CheckedPopupMenuItem<String>(
-                  value: _checkedValue2,
-                  enabled: false,
-                  checked: isChecked(_checkedValue2),
-                  child: Text(_checkedValue2)
-                ),
-                CheckedPopupMenuItem<String>(
-                  value: _checkedValue3,
-                  checked: isChecked(_checkedValue3),
-                  child: Text(_checkedValue3)
-                ),
-                CheckedPopupMenuItem<String>(
-                  value: _checkedValue4,
-                  checked: isChecked(_checkedValue4),
-                  child: Text(_checkedValue4)
-                )
+                value: _checkedValue1,
+                checked: isChecked(_checkedValue1),
+                child: Text(_checkedValue1)),
+            CheckedPopupMenuItem<String>(
+                value: _checkedValue2,
+                enabled: false,
+                checked: isChecked(_checkedValue2),
+                child: Text(_checkedValue2)),
+            CheckedPopupMenuItem<String>(
+                value: _checkedValue3,
+                checked: isChecked(_checkedValue3),
+                child: Text(_checkedValue3)),
+            CheckedPopupMenuItem<String>(
+                value: _checkedValue4,
+                checked: isChecked(_checkedValue4),
+                child: Text(_checkedValue4))
           ],
         ),
       ),

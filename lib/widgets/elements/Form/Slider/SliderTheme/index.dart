@@ -1,15 +1,14 @@
-/**
- * Created with Android Studio.
- * User: 三帆
- * Date: 20/12/2018
- * Time: 17:43
- * email: sanfan.hx@alibaba-inc.com
- * tartget:  xxx
- */
+/// Created with Android Studio.
+/// User: 三帆
+/// Date: 20/12/2018
+/// Time: 17:43
+/// email: sanfan.hx@alibaba-inc.com
+/// target:  xxx
 
 import 'package:flutter/material.dart';
-import '../../../../../common/widget_demo.dart';
-import  'demo.dart';
+
+import 'package:flutter_go/components/widget_demo.dart';
+import 'demo.dart';
 
 const contentA = '''
 ### **简介**
@@ -24,7 +23,7 @@ const contentA = '''
 基本属性参考以下代码: 
 
 ```
-new SliderTheme(
+ SliderTheme(
   data: SliderThemeData({
     @required Color activeTrackColor,
     @required Color inactiveTrackColor,
@@ -53,21 +52,20 @@ new SliderTheme(
 
 ''';
 
-
 class Demo extends StatefulWidget {
   static const String routeName = 'elements/Form/Slider/SliderTheme';
   _Demo createState() => _Demo();
 }
 
 class _Demo extends State<Demo> {
-
+  @override
   Widget build(BuildContext context) {
     return WidgetDemo(
       title: 'SliderTheme',
       codeUrl: 'elements/Form/Slider/SliderTheme/demo.dart',
       contentList: [
         contentA,
-        new SliderThemeDemo(),
+        SliderThemeDemo(),
       ],
       docUrl: 'https://docs.flutter.io/flutter/material/SliderTheme-class.html',
     );

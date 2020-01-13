@@ -1,12 +1,12 @@
-/*
- * @Author: 一凨 
- * @Date: 2019-01-07 15:33:42 
- * @Last Modified by: 一凨
- * @Last Modified time: 2019-01-07 15:42:54
- */
+/// @Author: 一凨
+/// @Date: 2019-01-07 15:33:42
+/// @Last Modified by: 一凨
+/// @Last Modified time: 2019-01-07 15:42:54
+
 import 'package:flutter/material.dart';
+
 import './demo.dart';
-import '../../../../../common/widget_demo.dart';
+import 'package:flutter_go/components/widget_demo.dart';
 
 const String content0 = '''
 ### **简介**
@@ -34,14 +34,14 @@ class _DemoState extends State<Demo> {
   @override
   Widget build(BuildContext context) {
     return WidgetDemo(
-       title: 'Image',
-       codeUrl: 'elements/Media/Image/Image/demo.dart',
-       docUrl: 'https://docs.flutter.io/flutter/dart-ui/Image-class.html',
-       contentList: [
-         content0,
-         content1,
-         ImageDemo(),
-       ],
+      title: 'Image',
+      codeUrl: 'elements/Media/Image/Image/demo.dart',
+      docUrl: 'https://docs.flutter.io/flutter/dart-ui/Image-class.html',
+      contentList: [
+        content0,
+        content1,
+        ImageDemo(),
+      ],
     );
   }
 }
